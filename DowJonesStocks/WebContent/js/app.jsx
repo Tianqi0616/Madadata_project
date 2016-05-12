@@ -150,15 +150,15 @@ var app = app || {};
 			return (
 				<div>
 					<header className="header">
-						<h1>Don Jones Stocks</h1>
+						<h1>Dow Jones Stocks</h1>
 						<input
 							className="new-todo"
-							placeholder="Enter the name of stocks; if multiple, please use semicolon to separate"
-							value={this.state.newTodo}
+							placeholder="Add a stock"
+							value={this.state.newTodo}		
 							onKeyDown={this.handleNewTodoKeyDown}
 							onChange={this.handleChange}
 							autoFocus={true}
-						/>
+						/>			
 					</header>
 					{main}
 					{footer}
