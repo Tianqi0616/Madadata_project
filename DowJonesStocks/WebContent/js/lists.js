@@ -48,7 +48,7 @@ function addTable() {
  // Adds a header row to the table and returns the set of columns.
  // Need to do union of keys from all records as some records may not contain
  // all records
- function addAllColumnHeaders(myList)
+function addAllColumnHeaders(myList)
  {
      var columnSet = [];
      var headerTr$ = document.createElement('tr');

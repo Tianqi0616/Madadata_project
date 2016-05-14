@@ -81,14 +81,8 @@ var app = app || {};
 					completed: this.props.todo.completed,
 					editing: this.props.editing
 				})}>
-					<div className="view">
-						<input
-							className="toggle"
-							type="checkbox"
-							checked={this.props.todo.completed}
-							onChange={this.props.onToggle}
-						/>
-						<label onDoubleClick={this.handleEdit}>
+					<div className="view" id="view">
+						<label>
 							{this.props.todo.title}
 						</label>
 						<button className="destroy" onClick={this.props.onDestroy} />

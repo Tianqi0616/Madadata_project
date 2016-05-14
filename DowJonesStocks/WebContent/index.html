@@ -6,8 +6,9 @@
 		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
 		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
 	</head>
-	<body>
-		<section class="todoapp"></section>	
+	<body onload="addScreener()">
+		<section class="todoapp" id="todoapp"></section>
+		<div class="container"></div>
 		<a href="lists.html" class="lists">View All</a>
 		<footer class="info">	
 			<p>Created by Tianqi Chen</p>
@@ -21,7 +22,12 @@
 		<script src="node_modules/react/dist/JSXTransformer.js"></script>
 		<script src="node_modules/director/build/director.js"></script>
 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="json/0510.json"></script>
+		<script type="text/javascript" src="json/stocks.json"></script>
+		<script src="js/d3.js"></script>	
 		<script src="js/utils.js"></script>
+		<script src="js/screener.js"></script>
 		<script src="js/todoModel.js"></script>
 		<!-- jsx is an optional syntactic sugar that transforms methods in React's
 		`render` into an HTML-looking format. Since the two models above are

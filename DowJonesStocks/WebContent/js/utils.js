@@ -21,6 +21,7 @@ var app = app || {};
 			return uuid;
 		},
 
+
 		pluralize: function (count, word) {
 			return count === 1 ? word : word + 's';
 		},
@@ -47,4 +48,7 @@ var app = app || {};
 			return newObj;
 		}
 	};
+	
 })();
+
+

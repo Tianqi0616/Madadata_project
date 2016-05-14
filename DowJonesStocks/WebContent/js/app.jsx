@@ -134,12 +134,6 @@ var app = app || {};
 			if (todos.length) {
 				main = (
 					<section className="main">
-						<input
-							className="toggle-all"
-							type="checkbox"
-							onChange={this.toggleAll}
-							checked={activeTodoCount === 0}
-						/>
 						<ul className="todo-list">
 							{todoItems}
 						</ul>
@@ -153,7 +147,7 @@ var app = app || {};
 						<h1>Dow Jones Stocks</h1>
 						<input
 							className="new-todo"
-							placeholder="Add a stock"
+							placeholder="Enter a symbol to add a stock to the customized screener"
 							value={this.state.newTodo}		
 							onKeyDown={this.handleNewTodoKeyDown}
 							onChange={this.handleChange}
@@ -161,7 +155,7 @@ var app = app || {};
 						/>			
 					</header>
 					{main}
-					{footer}
+					
 				</div>
 			);
 		}
@@ -172,6 +166,7 @@ var app = app || {};
 	function render() {
 		React.render(
 			<TodoApp model={model}/>,
+			document.getElementsById('view') = "";
 			document.getElementsByClassName('todoapp')[0]
 		);
 	}

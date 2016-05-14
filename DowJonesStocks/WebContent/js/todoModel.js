@@ -8,6 +8,7 @@ var app = app || {};
 	'use strict';
 
 	var Utils = app.Utils;
+	var Screener = app.Screener;
 	// Generic "model" object. You can use whatever
 	// framework you want. For this application it
 	// may not even be worth separating this logic
@@ -31,40 +32,19 @@ var app = app || {};
 	app.TodoModel.prototype.addTodo = function (title) {
 		this.todos = this.todos.concat({
 			id: Utils.uuid(),
-			title: title,
-			completed: false
+			title: Screener.info(title),
+			symbol: title,
+			completed: false,
+			screener: Screener.line(title),
 		});
-
-		this.inform();
-	};
-
-	app.TodoModel.prototype.toggleAll = function (checked) {
-		// Note: it's usually better to use immutable data structures since they're
-		// easier to reason about and React works very well with them. That's why
-		// we use map() and filter() everywhere instead of mutating the array or
-		// todo items themselves.
-		this.todos = this.todos.map(function (todo) {
-			return Utils.extend({}, todo, {completed: checked});
-		});
-
-		this.inform();
-	};
-
-	app.TodoModel.prototype.toggle = function (todoToToggle) {
-		this.todos = this.todos.map(function (todo) {
-			return todo !== todoToToggle ?
-				todo :
-				Utils.extend({}, todo, {completed: !todo.completed});
-		});
-
 		this.inform();
 	};
 
 	app.TodoModel.prototype.destroy = function (todo) {
+		Screener.destroy(todo.symbol);
 		this.todos = this.todos.filter(function (candidate) {
 			return candidate !== todo;
 		});
-
 		this.inform();
 	};
 
