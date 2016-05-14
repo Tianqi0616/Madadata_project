@@ -166,7 +166,6 @@ var app = app || {};
 	function render() {
 		React.render(
 			<TodoApp model={model}/>,
-			document.getElementsById('view') = "";
 			document.getElementsByClassName('todoapp')[0]
 		);
 	}
