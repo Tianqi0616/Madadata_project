@@ -12,7 +12,7 @@
 
 ### Setup
 
-Eclipse: Default 
+`Eclipse`: Default 
 
 ### Examples
 
