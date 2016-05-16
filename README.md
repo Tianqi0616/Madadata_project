@@ -8,7 +8,7 @@
 
 ### Current Progress
 
-TODO: sqlite API
+`TODO`: sqlite API
 
 ### Setup
 
