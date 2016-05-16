@@ -1,24 +1,24 @@
 # Madadata_project_frontend
 
-Dow Jones Component Stocks Analytic
+### Dow Jones Component Stocks Analytic
 
-- Timeline
+### Timeline
 
 Please see:
 
 https://onedrive.live.com/redir?resid=2A748E6C56A2A5B7!171&authkey=!AI9vtjYleGe5yag&ithint=file%2cxlsx
 
-- Current Progress
+### Current Progress
 
 TODO: sqlite API
 
-- Setup
+### Setup
 
 Eclipse: Default 
 
-- Examples
+### Examples
 
-List Page
+- List Page
 
 1)List Page was set to show 20 tuples of stocks in a table with the info of Symbol, Date, High, Low, Open, Close, Volume.
 
@@ -27,7 +27,7 @@ List Page
 Demo: 
 Madadata_project/DEMO/List Page.pdf
 
-Home Page
+- Home Page
 
 1)User Input Textbox: User could enter the symbol of a stock to add it on the stock screener.
 
