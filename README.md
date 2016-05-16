@@ -1,14 +1,12 @@
 # Madadata_project_frontend
 
-# Dow Jones Component Stocks Analytic
+Dow Jones Component Stocks Analytic
 
 - Timeline
 
 Please see:
 
 https://onedrive.live.com/redir?resid=2A748E6C56A2A5B7!171&authkey=!AI9vtjYleGe5yag&ithint=file%2cxlsx
-
-
 
 - Current Progress
 
