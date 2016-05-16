@@ -5,7 +5,8 @@ Dow Jones Component Stocks Analytic
 - Timeline
 
 Please see:
-  https://onedrive.live.com/edit.aspx?resid=2A748E6C56A2A5B7!171&app=Excel&wdnd=1&wdPreviousSession=cbb4426c-3b0e-4029-bc14-cfe7569e2358&wdNewAndOpenCt=1463433671582&wdPreviousCorrelation=f000a8fd-7990-4807-9c3c-10bbe1df6e84
+
+https://onedrive.live.com/redir?resid=2A748E6C56A2A5B7!171&authkey=!AI9vtjYleGe5yag&ithint=file%2cxlsx
 
 - Current Progress
 
@@ -25,6 +26,8 @@ List Page
 
 Demo 
 
+Madadata_project/DEMO/List Page.pdf
+
 Home Page
 
 1)User Input Textbox: User could enter the symbol of a stock to add it on the stock screener.
@@ -34,5 +37,7 @@ Home Page
 3)Stock Screener: Simple coordinate plot whose x-axis is the Date (here is May-10-2016) and y-axis is the change rate of Volume. Stock Screener supports showing multiple tickers in the same plot in order to compare.
 
 Demo (User entering AAAP, AAL, BBC)
+
+Madadata_project/DEMO/Home Page.pdf
 
 
