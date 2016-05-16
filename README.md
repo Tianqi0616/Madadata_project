@@ -24,8 +24,7 @@ List Page
 
 2)Click next button to show the next 20 stocks (first page does not include next button); Click prev button to show the previous 20 stocks (last page does not include prev button). 
 
-Demo 
-
+Demo: 
 Madadata_project/DEMO/List Page.pdf
 
 Home Page
@@ -36,8 +35,6 @@ Home Page
 
 3)Stock Screener: Simple coordinate plot whose x-axis is the Date (here is May-10-2016) and y-axis is the change rate of Volume. Stock Screener supports showing multiple tickers in the same plot in order to compare.
 
-Demo (User entering AAAP, AAL, BBC)
-
-Madadata_project/DEMO/Home Page.pdf
+Demo (User entering AAAP, AAL, BBC): Madadata_project/DEMO/Home Page.pdf
 
 
