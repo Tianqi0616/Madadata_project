@@ -22,8 +22,7 @@ Eclipse: Default
 
 2)Click next button to show the next 20 stocks (first page does not include next button); Click prev button to show the previous 20 stocks (last page does not include prev button). 
 
-Demo: 
-Madadata_project/DEMO/List Page.pdf
+[Demo](https://github.com/Tianqi0616/Madadata_project/blob/master/DEMO/List%20Page.pdf)
 
 - Home Page
 
@@ -33,6 +32,6 @@ Madadata_project/DEMO/List Page.pdf
 
 3)Stock Screener: Simple coordinate plot whose x-axis is the Date (here is May-10-2016) and y-axis is the change rate of Volume. Stock Screener supports showing multiple tickers in the same plot in order to compare.
 
-Demo (User entering AAAP, AAL, BBC): Madadata_project/DEMO/Home Page.pdf
+[Demo (User entering AAAP, AAL, BBC)](https://github.com/Tianqi0616/Madadata_project/blob/master/DEMO/Home%20Page.pdf)
 
 
