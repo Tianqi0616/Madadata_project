@@ -33,7 +33,7 @@
 
   2) Stock Info Label: After user entering a symbol, the info of the corresponding stock will show up on the page as a label.
 
-  3) Stock Screener: Simple coordinate plot whose x-axis is the Date (here is May-10-2016) and y-axis is the change rate of Volume. Stock Screener supports showing multiple tickers in the same plot in order to compare.
+  3) Stock Screener: Simple coordinate plot whose x-axis is the Date (here is May-03-2016 to May-10-2016) and y-axis is the changing rate of Volume. Stock Screener supports showing multiple tickers in the same plot in order to compare.
 
   [Demo (User entering AAAP, AAL, BBC)](https://github.com/Tianqi0616/Madadata_project/blob/master/DEMO/Home%20Page.pdf)
 
