@@ -1,10 +1,9 @@
 var xScale;
 var yScale;
 
-var width = 600, height = 300;
+var width = 600, height = 400;
 // SVG画布边缘与图表内容的距离
-var padding = {top: 20, right: 20, bottom: 30, left: 50};
-// 创建一个分组用来组合要画的图表元素
+var padding = {top: 35, right: 20, bottom: 30, left: 0};
 
 var app = app || {};
 
@@ -96,9 +95,9 @@ var app = app || {};
 
 function addScreener() {
 	
-    var main = d3.select('.container').append('svg').append('g')
-            .classed('main', true)
-            .attr('transform', "translate(" + padding.top + ',' + padding.left + ')');
+    var main = d3.select('.container').append('svg')
+    			.append('g').classed('main', true)          
+    			.attr('transform', "translate(" + padding.top + ',' + padding.left + ')');
     // 模拟数据
 	var dataset = [
 		              {x: 0, y: -1}, {x: 1, y: -0.02},
