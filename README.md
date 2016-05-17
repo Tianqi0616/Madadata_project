@@ -6,6 +6,8 @@
 
 [See Timeline](https://onedrive.live.com/redir?resid=2A748E6C56A2A5B7!171&authkey=!AI9vtjYleGe5yag&ithint=file%2cxlsx)
 
+![Timeline](https://raw.githubusercontent.com/Tianqi0616/Madadata_project/master/Timeline.PNG)
+
 ### Current Progress
 
 `TODO`: sqlite API
