@@ -9,6 +9,13 @@ function nextTable() {
 	addTable();
 }
 function addTable() {
+	
+	$.get("stocks.sql", function(content) {
+	    db.transaction(function (tx) {  
+	        alert("test");
+	    });
+	});
+	
 	var jqXHR = $.ajax({ 
 		  type : 'GET',
 		  dataType : 'json',
@@ -26,7 +33,7 @@ function addTable() {
 	else
 		document.getElementById("next").innerHTML = "next";
 
-	document.getElementById("indexRange").innerHTML = (20*index+1).toString() + " - " + (20*(index+1)+1).toString()
+	document.getElementById("indexRange").innerHTML = (20*index+1).toString() + " - " + (20*(index+1)).toString()
 														+ " out of " + myList.length.toString();
 
     var columns = addAllColumnHeaders(myList);

@@ -51,6 +51,7 @@ var app = app || {};
 		    .attr('class', 'line')
 		    .attr("id", title)
 		    .attr('d', line(data));
+		     
 		},
 
 		destroy: function (title) {

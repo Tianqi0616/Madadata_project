@@ -82,7 +82,7 @@ var app = app || {};
 					editing: this.props.editing
 				})}>
 					<div className="view" id="view">
-						<label>
+						<label id="Label">
 							{this.props.todo.title}
 						</label>
 						<button className="destroy" onClick={this.props.onDestroy} />
