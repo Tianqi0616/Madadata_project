@@ -10,31 +10,9 @@ var app = app || {};
 (function () {
 	'use strict';
 	app.Screener = {
-		line: function (title) {
-			
-			var jqXHR = $.ajax({ 
-				  type : 'GET',
-				  dataType : 'json',
-			      url: 'json/stocks.json', 
-			      async: false,
-			   });     
-			var myList = JSON.parse(jqXHR.responseText);
-			
-			var data = [];
-			var xindex = 0;
-			var startVolume;
-			for (var i = 0 ; i <  myList.length ; i++) {
-				if ( title.localeCompare(myList[i]["Symbol"]) == 0 ){
-					if (xindex == 0){
-						startVolume = myList[i]["Volume"];
-					}
-					myList[i]["changeRate"] = (myList[i]["Volume"] - startVolume) * 1.0/ startVolume;
-					myList[i]["x"] = xindex++;//JSON.stringify(myList[i]["Date"]);
-					//myList[i]["x"] = myList[i]["x"].substr(0, myList[i]["x"].length-5);
-					data.push(myList[i]);
-				}
-			}	
-				    
+		line: function (title, data) {
+
+			var data = data;
 		    var main = d3.select('.container .main');
 		    
 		    var line = d3.svg.line()

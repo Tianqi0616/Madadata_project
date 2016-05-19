@@ -30,13 +30,13 @@ var app = app || {};
 		this.onChanges.forEach(function (cb) { cb(); });
 	};
 
-	app.StockModel.prototype.addStock = function (title) {
+	app.StockModel.prototype.addStock = function (title, data) {
 		this.stocks = this.stocks.concat({
 			id: Utils.uuid(),
 			title: Screener.info(title),
 			symbol: title,
 			//completed: false,
-			screener: Screener.line(title),
+			screener: Screener.line(title, data),
 		});
 		this.inform();
 	};

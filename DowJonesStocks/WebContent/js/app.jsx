@@ -30,11 +30,37 @@ var app = app || {};
 
 			event.preventDefault();
 
-			var val = this.state.newStock.trim();
-
-			if (val) {
-				this.props.model.addStock(val);
+			var title = this.state.newStock.trim();
+			
+			var jqXHR = $.ajax({ 
+				  type : 'GET',
+				  dataType : 'json',
+			      url: 'json/stocks.json', 
+			      async: false,
+			   });     
+			   
+			var myList = JSON.parse(jqXHR.responseText);
+			
+			var data = [];
+			var xindex = 0;
+			var startVolume;
+			for (var i = 0 ; i <  myList.length ; i++) {
+				if ( title.localeCompare(myList[i]["Symbol"]) == 0 ){
+					if (xindex == 0){
+						startVolume = myList[i]["Volume"];
+					}
+					myList[i]["changeRate"] = (myList[i]["Volume"] - startVolume) * 1.0/ startVolume;
+					myList[i]["x"] = xindex++;
+					data.push(myList[i]);
+				}
+			}	
+			if (data.length != 0){
+				document.getElementById("msg").innerHTML = "";
+				this.props.model.addStock(title, data);
 				this.setState({newStock: ''});
+			}			
+			else{
+				document.getElementById("msg").innerHTML = "Invalid Symbol";
 			}
 		},
 
@@ -44,7 +70,6 @@ var app = app || {};
 
 
 		render: function () {
-			var footer;
 			var main;
 			var stocks = this.props.model.stocks;
 
@@ -67,8 +92,8 @@ var app = app || {};
 					</section>
 				);
 			}
-
-			return (
+			
+			return (				
 				<div>
 					<header className="header">
 						<input
