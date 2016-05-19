@@ -11,10 +11,10 @@ var app = app || {};
 	var ESCAPE_KEY = 27;
 	var ENTER_KEY = 13;
 
-	app.TodoItem = React.createClass({
+	app.StockItem = React.createClass({
 
 		getInitialState: function () {
-			return {editText: this.props.todo.title};
+			return {editText: this.props.stock.title};
 		},
 
 		render: function () {
@@ -22,7 +22,7 @@ var app = app || {};
 				<li>
 					<div className="view" id="view">
 						<label id="Label">
-							{this.props.todo.title}
+							{this.props.stock.title}
 						</label>
 						<button className="destroy" onClick={this.props.onDestroy} />
 					</div>

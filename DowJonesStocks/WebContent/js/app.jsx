@@ -8,61 +8,61 @@ var app = app || {};
 (function () {
 	'use strict';
 	
-	var TodoItem = app.TodoItem;
+	var StockItem = app.StockItem;
 
 	var ENTER_KEY = 13;
 
-	var TodoApp = React.createClass({
+	var StockApp = React.createClass({
 		getInitialState: function () {
 			return {
-				newTodo: ''
+				newStock: ''
 			};
 		},
 
 		handleChange: function (event) {
-			this.setState({newTodo: event.target.value});
+			this.setState({newStock: event.target.value});
 		},
 
-		handleNewTodoKeyDown: function (event) {
+		handleNewStockKeyDown: function (event) {
 			if (event.keyCode !== ENTER_KEY) {
 				return;
 			}
 
 			event.preventDefault();
 
-			var val = this.state.newTodo.trim();
+			var val = this.state.newStock.trim();
 
 			if (val) {
-				this.props.model.addTodo(val);
-				this.setState({newTodo: ''});
+				this.props.model.addStock(val);
+				this.setState({newStock: ''});
 			}
 		},
 
-		destroy: function (todo) {
-			this.props.model.destroy(todo);
+		destroy: function (stock) {
+			this.props.model.destroy(stock);
 		},
 
 
 		render: function () {
 			var footer;
 			var main;
-			var todos = this.props.model.todos;
+			var stocks = this.props.model.stocks;
 
-			var todoItems = todos.map(function (todo) {
+			var stockItems = stocks.map(function (stock) {
 				return (
-					<TodoItem
-						key={todo.id}
-						todo={todo}
-						onDestroy={this.destroy.bind(this, todo)}
+					<StockItem
+						key={stock.id}
+						stock={stock}
+						onDestroy={this.destroy.bind(this, stock)}
 					/>
 				);
 			}, this);
 
-			if (todos.length) {
+			if (stocks.length) {
 				main = (
 					<section className="main">
-						<ul className="todo-list">
-							{todoItems}
+						<ul className="stock-list">
+							{stockItems}
 						</ul>
 					</section>
 				);
@@ -74,8 +74,8 @@ var app = app || {};
 						<input
 							className="new-stock"
 							placeholder="Enter a symbol to add a stock to the customized screener"
-							value={this.state.newTodo}		
-							onKeyDown={this.handleNewTodoKeyDown}
+							value={this.state.newStock}		
+							onKeyDown={this.handleNewStockKeyDown}
 							onChange={this.handleChange}
 							autoFocus={true}
 						/>			
@@ -86,11 +86,11 @@ var app = app || {};
 		}
 	});
 
-	var model = new app.TodoModel('react-stocks');
+	var model = new app.StockModel('react-stocks');
 
 	function render() {
 		React.render(
-			<TodoApp model={model}/>,
+			<StockApp model={model}/>,
 			document.getElementsByClassName('app')[0]
 		);
 	}

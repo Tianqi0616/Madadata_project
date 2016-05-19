@@ -14,24 +14,24 @@ var app = app || {};
 	// may not even be worth separating this logic
 	// out, but we do this to demonstrate one way to
 	// separate out parts of your application.
-	app.TodoModel = function (key) {
+	app.StockModel = function (key) {
 		this.key = key;
-		//this.todos = Utils.store(key);
-		this.todos = [];
+		//this.stocks = Utils.store(key);
+		this.stocks = [];
 		this.onChanges = [];
 	};
 
-	app.TodoModel.prototype.subscribe = function (onChange) {
+	app.StockModel.prototype.subscribe = function (onChange) {
 		this.onChanges.push(onChange);
 	};
 
-	app.TodoModel.prototype.inform = function () {
-		Utils.store(this.key, this.todos);
+	app.StockModel.prototype.inform = function () {
+		Utils.store(this.key, this.stocks);
 		this.onChanges.forEach(function (cb) { cb(); });
 	};
 
-	app.TodoModel.prototype.addTodo = function (title) {
-		this.todos = this.todos.concat({
+	app.StockModel.prototype.addStock = function (title) {
+		this.stocks = this.stocks.concat({
 			id: Utils.uuid(),
 			title: Screener.info(title),
 			symbol: title,
@@ -41,10 +41,10 @@ var app = app || {};
 		this.inform();
 	};
 
-	app.TodoModel.prototype.destroy = function (todo) {
-		Screener.destroy(todo.symbol);
-		this.todos = this.todos.filter(function (candidate) {
-			return candidate !== todo;
+	app.StockModel.prototype.destroy = function (stock) {
+		Screener.destroy(stock.symbol);
+		this.stocks = this.stocks.filter(function (candidate) {
+			return candidate !== stock;
 		});
 		this.inform();
 	};
