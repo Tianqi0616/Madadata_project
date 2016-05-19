@@ -16,7 +16,8 @@ var app = app || {};
 	// separate out parts of your application.
 	app.TodoModel = function (key) {
 		this.key = key;
-		this.todos = Utils.store(key);
+		//this.todos = Utils.store(key);
+		this.todos = [];
 		this.onChanges = [];
 	};
 
@@ -34,7 +35,7 @@ var app = app || {};
 			id: Utils.uuid(),
 			title: Screener.info(title),
 			symbol: title,
-			completed: false,
+			//completed: false,
 			screener: Screener.line(title),
 		});
 		this.inform();
@@ -45,22 +46,6 @@ var app = app || {};
 		this.todos = this.todos.filter(function (candidate) {
 			return candidate !== todo;
 		});
-		this.inform();
-	};
-
-	app.TodoModel.prototype.save = function (todoToSave, text) {
-		this.todos = this.todos.map(function (todo) {
-			return todo !== todoToSave ? todo : Utils.extend({}, todo, {title: text});
-		});
-
-		this.inform();
-	};
-
-	app.TodoModel.prototype.clearCompleted = function () {
-		this.todos = this.todos.filter(function (todo) {
-			return !todo.completed;
-		});
-
 		this.inform();
 	};
 

@@ -3,21 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Dow Jones Stocks</title>
-		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
-		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
-		<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<!-- <link rel="stylesheet" href="node_modules/todomvc-common/base.css">-->
+		<link rel="stylesheet" href="node_modules/app-css/index.css">
 	</head>
 	<body onload="addScreener()">
-		<section class="todoapp" id="todoapp"></section>
+		<h1>Dow Jones Stocks</h1>
+		<section class="app" id="app"></section>
 		<div class="container"></div>
-		<a href="lists.html" class="lists">View All</a>
+		<a href="lists.html" class="viewlist">View All</a>
 		<footer class="info">	
 			<p>Created by Tianqi Chen</p>
 			<p>Part of Madadata Project</p>
 			<p><a href="https://github.com/Tianqi0616/Madadata_project">Click to see code in github</a></p>
 		</footer>
 
-		<script src="node_modules/todomvc-common/base.js"></script>
+		<!-- <script src="node_modules/todomvc-common/base.js"></script> -->
 		<script src="node_modules/react/dist/react-with-addons.js"></script>
 		<script src="node_modules/classnames/index.js"></script>
 		<script src="node_modules/react/dist/JSXTransformer.js"></script>
@@ -33,7 +33,6 @@
 		`render` into an HTML-looking format. Since the two models above are
 		unrelated to React, we didn't need those transforms. -->
 		<script type="text/jsx" src="js/todoItem.jsx"></script>
-		<script type="text/jsx" src="js/footer.jsx"></script>
 		<script type="text/jsx" src="js/app.jsx"></script>
 		
 		<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
